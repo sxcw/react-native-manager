@@ -40,6 +40,10 @@ class LoginForm extends Component {
           />
         </CardSection>
 
+        <Text style={errorTextStyle}>
+          {this.props.error}
+        </Text>
+
         <CardSection>
           <Button onPress={this.onButtonPress.bind(this)}>
             Login
