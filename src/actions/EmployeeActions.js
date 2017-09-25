@@ -1,3 +1,4 @@
+import firebase from 'firebase';
 import { EMPLOYEE_UPDATE, EMPLOYEE_CREATE } from './type';
 
 export const employeeUpdate = ({ prop, value }) => {
@@ -8,8 +9,5 @@ export const employeeUpdate = ({ prop, value }) => {
 }
 
 export const employeeCreate = ({ name, phone, shift }) => {
-  return {
-    type: EMPLOYEE_CREATE,
-    payload: { name, phone, shift }
-  };
+  firebase.database.ref('users/userId/employees')
 }
