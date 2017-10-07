@@ -3,6 +3,7 @@ import { Picker, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { employeeUpdate, employeeCreate } from '../actinos';
 import { Card, CardSection, Input, Button } from './common';
+import EmployeeForm from './EmployeeForm';
 
 class EmployeeCreate extends Component {
   onButtonPress() {
@@ -12,6 +13,7 @@ class EmployeeCreate extends Component {
   render() {
     return (
       <Card>
+        <EmployeeForm {...this.props}/>
         <CardSection>
           <Button onPress={this.onButtonPress.bind(this)}>
             Create
